@@ -1,0 +1,8 @@
+{
+  "name": "car-api",
+  "version": "1.0.0",
+  "description": "Resfull API to manage cars",
+  "main": "index.js",
+  "author": "Enrique Plaza",
+  "license": "MIT"
+}
