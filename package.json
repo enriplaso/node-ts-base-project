@@ -16,7 +16,9 @@
     "build-all": "yarn clean && yarn build && yarn esbuild-node && yarn esbuild-browser"
   },
   "dependencies": {
-    "express": "^4.17.1"
+    "ajv": "^8.6.2",
+    "express": "^4.17.1",
+    "mongoose": "^6.0.2"
   },
   "devdependencies": {
     "@types/node": "^16.7.5",
