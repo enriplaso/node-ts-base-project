@@ -11,6 +11,14 @@
             "program": "${workspaceRoot}/dist/server.js",
             "webRoot": "${workspaceFolder}",
             "preLaunchTask": "npm: build"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Tests",
+            "program": "${workspaceRoot}/node_modules/mocha/bin/_mocha",
+            "webRoot": "${workspaceFolder}",
+            "preLaunchTask": "npm: test"
         }
     ]
 }
