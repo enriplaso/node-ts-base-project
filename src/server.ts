@@ -1,12 +1,23 @@
-export const delayMillis = (delayMs: number): Promise<void> => new Promise((resolve) => setTimeout(resolve, delayMs));
+  
+import 'reflect-metadata';
 
-export const greet = (name: string): string => `Hello ${name}`;
+import express from 'express';
 
-export const foo = async (): Promise<boolean> => {
-  console.log(greet('World'));
-  await delayMillis(1000);
-  console.log('done');
-  return true;
-};
+import Container from 'typedi';
+import CarController from './controller/CarController';
 
-console.log('hhehew');
+const main = async () => {
+  const app = express();
+
+  const carController = Container.get(CarController);
+
+  app.get('/cars', (req, res) => carController.getAllCars(req, res));
+
+  app.listen(3000, () => {
+    console.log('Server started');
+  });
+}
+
+main().catch(err => {
+  console.error(err);
+});
