@@ -12,8 +12,6 @@ class CarService {
   constructor() { }
 
   async getAllCars(): Promise<Car[]> {
-
-    //TDO handel connection to DB
     return this.cars;
   }
 }

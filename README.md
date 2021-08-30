@@ -1,1 +1,1 @@
-# CarApp
+# Base project template
